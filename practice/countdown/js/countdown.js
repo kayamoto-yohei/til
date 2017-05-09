@@ -1,7 +1,7 @@
 function getResult() {
     'use stricrt';
     // 現在時刻とターゲットの時刻の差を算出
-    var target = new Date(2017, 11, 17, 19, 0, 0).getTime();
+    var target = new Date(2017, 5, 13, 17, 0, 0).getTime();
     var now = Date.now();
     var diff = (target - now) / 1000;
     // console.log(target, now, diff)
