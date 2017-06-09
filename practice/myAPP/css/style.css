@@ -11,6 +11,12 @@ body {
     margin: 30px auto;
 }
 
+.container .container_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 textarea {
     width: 400px;
     box-sizing: border-box;
@@ -39,16 +45,13 @@ p {
 }
 
 .btn {
-    display: inline-block;
     width: 150px;
     background: #0af;
-    padding: 5px;
     color: #fff;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
     box-shadow: 0 4px 0 #08c;
-    float: right;
 }
 
 .warning {

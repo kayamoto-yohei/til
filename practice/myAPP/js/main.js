@@ -1,8 +1,10 @@
 (function() {
     'use strict';
 
-    var comment = document.getElementById('comment');
-    var label = document.getElementById('label');
+    var comment = document.getElementById('js-comment');
+    var label = document.getElementById('js-label');
+    var message = document.getElementById('js-alert');
+    var messageText = 'unable to be input';
 
     var LIMIT = 30;
     var WARNING = 10;
@@ -18,6 +20,14 @@
         //     label.className = '';
         // }
         label.className = remaining < WARNING ? 'warning' : '';
+
+        if (remaining === 0) {
+            comment.readOnly = true;
+            message.innerHTML = '<br>' + messageText;
+            message.className = 'warning';
+        } else {
+            comment.readOnly = false;
+        }
     });
 
 })();
