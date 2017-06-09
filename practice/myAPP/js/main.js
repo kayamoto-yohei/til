@@ -4,7 +4,7 @@
     var comment = document.getElementById('js-comment');
     var label = document.getElementById('js-label');
     var message = document.getElementById('js-alert');
-    var messageText = 'unable to be input';
+    var messageText = 'The number of characters over';
 
     var LIMIT = 30;
     var WARNING = 10;
@@ -21,12 +21,9 @@
         // }
         label.className = remaining < WARNING ? 'warning' : '';
 
-        if (remaining === 0) {
-            comment.readOnly = true;
+        if (remaining <= 0) {
             message.innerHTML = '<br>' + messageText;
             message.className = 'warning';
-        } else {
-            comment.readOnly = false;
         }
     });
 
