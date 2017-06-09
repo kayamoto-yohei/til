@@ -17,7 +17,7 @@
         var pwd = '';
 
         seed = seed_letters + seed_letters.toUpperCase();
-        if (numbers.checked === true) {
+        if (numbers.checked) {
             seed += seed_numbers;
         }
 

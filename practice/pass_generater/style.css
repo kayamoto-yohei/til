@@ -30,7 +30,6 @@ input[type="text"] {
 fieldset {
     margin-top: 40px;
     border: 1px dashed #aaa;
-    stroke-dashoffset: 4px;
     border-radius: 5px;
     text-align: left;
 }
