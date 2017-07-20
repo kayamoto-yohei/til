@@ -4,14 +4,14 @@
     var comment = document.getElementById('js-comment');
     var label = document.getElementById('js-label');
     var message = document.getElementById('js-alert');
-    var messageText = 'The number of characters over';
+    var warningText = 'The number of characters over';
 
     var LIMIT = 30;
     var WARNING = 10;
 
     label.innerHTML = LIMIT;
 
-    comment.addEventListener('keyup', function() {
+    comment.addEventListener('keyup', function () {
         var remaining = LIMIT - this.value.length;
         label.innerHTML = remaining;
         // if (remaining < WARNING) {
@@ -22,8 +22,11 @@
         label.className = remaining < WARNING ? 'warning' : '';
 
         if (remaining <= 0) {
-            message.innerHTML = '<br>' + messageText;
+            message.innerHTML = '<br>' + warningText;
             message.className = 'warning';
+        } else {
+            message.innerHTML = '';
+            message.className = '';
         }
     });
 
